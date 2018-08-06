@@ -9,8 +9,8 @@ unconferences, inspired by my work as a co-organizer for [Offline Camp](http://o
    * [GitHub repo](UPDATE THIS LINK) (UPDATE REPO NAME)
    * [Live site](UPDATE THIS LINK) (deployed on GitHub Pages)
 * Back-end API
-   * [GitHub repo](UPDATE THIS LINK) (UPDATE REPO NAME)
-   * [Live site](UPDATE THIS LINK) (deployed on Heroku)
+   * [GitHub repo](https://github.com/terichadbourne/unscheduler-backend) (unscheduler-backend)
+   * [Live site](https://sleepy-springs-55525.herokuapp.com/) (deployed on Heroku)
 
 ## Technologies used
   - **Front-end technologies**
