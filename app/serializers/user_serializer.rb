@@ -5,4 +5,5 @@ class UserSerializer < ActiveModel::Serializer
   has_many :discussions_proposed
   has_many :discussions, through: :votes
   has_many :events
+  has_many :timeslots
 end

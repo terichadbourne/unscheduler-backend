@@ -16,15 +16,15 @@ class TimeslotsController < OpenReadController
   end
 
   # POST /timeslots
-  # def create
-  #   @timeslot = current_user.timeslots.build(timeslot_params)
-  #
-  #   if @timeslot.save
-  #     render json: @timeslot, status: :created, location: @timeslot
-  #   else
-  #     render json: @timeslot.errors, status: :unprocessable_entity
-  #   end
-  # end
+  def create
+    @timeslot = current_user.timeslots.build(timeslot_params)
+
+    if @timeslot.save
+      render json: @timeslot, status: :created, location: @timeslot
+    else
+      render json: @timeslot.errors, status: :unprocessable_entity
+    end
+  end
 
   # PATCH/PUT /timeslots/1
   # def update
@@ -50,7 +50,7 @@ class TimeslotsController < OpenReadController
   # end
 
   # Only allow a trusted parameter "white list" through.
-  # def timeslot_params
-  #   params.require(:timeslot).permit(:start_time, :end_time, :room_name, :event_id)
-  # end
+  def timeslot_params
+    params.require(:timeslot).permit(:start_time, :end_time, :room_name, :event_id)
+  end
 end
