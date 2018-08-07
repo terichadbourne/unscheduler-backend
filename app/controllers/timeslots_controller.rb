@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class TimeslotsController < OpenReadController
-  # before_action :set_timeslot, only: %i[update destroy]
+  before_action :set_timeslot, only: %i[update destroy]
 
   # GET /timeslots
   def index
@@ -27,27 +27,27 @@ class TimeslotsController < OpenReadController
   end
 
   # PATCH/PUT /timeslots/1
-  # def update
-  #   if @timeslot.update(timeslot_params)
-  #     render json: @timeslot
-  #   else
-  #     render json: @timeslot.errors, status: :unprocessable_entity
-  #   end
-  # end
+  def update
+    if @timeslot.update(timeslot_params)
+      render json: @timeslot
+    else
+      render json: @timeslot.errors, status: :unprocessable_entity
+    end
+  end
 
   # DELETE /timeslots/1
-  # def destroy
-  #   @timeslot.destroy
-  #
-  #   head :no_content
-  # end
-  #
-  # private
+  def destroy
+    @timeslot.destroy
+
+    head :no_content
+  end
+
+  private
 
   # Use callbacks to share common setup or constraints between actions.
-  # def set_timeslot
-  #   @timeslot = current_user.timeslots.find(params[:id])
-  # end
+  def set_timeslot
+    @timeslot = current_user.timeslots.find(params[:id])
+  end
 
   # Only allow a trusted parameter "white list" through.
   def timeslot_params
