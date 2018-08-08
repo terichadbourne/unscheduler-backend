@@ -10,7 +10,7 @@ class EventSerializer < ActiveModel::Serializer
              :user,
              :stage
 
-has_many :timeslots
+  has_many :timeslots
 
   def stage
     if object.proposals_open && !object.voting_open && !object.schedule_finalized
