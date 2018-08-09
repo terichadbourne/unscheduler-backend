@@ -7,10 +7,12 @@ class EventSerializer < ActiveModel::Serializer
              :proposals_open,
              :voting_open,
              :schedule_finalized,
-             :user,
-             :stage
+             :stage,
+             :user_id
 
-  has_many :timeslots
+  has_many :timeslots do
+    object.timeslots.pluck(:id)
+  end
 
   def stage
     if object.proposals_open && !object.voting_open && !object.schedule_finalized

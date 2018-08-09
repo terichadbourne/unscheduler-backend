@@ -10,9 +10,16 @@ class DiscussionSerializer < ActiveModel::Serializer
              :current_user_session_votes,
              :current_user_total_votes,
              :can_downvote,
-             :admin?
-  has_one :discussion_proposer
-  has_many :users, through: :votes
+             :admin?,
+             :user_id
+
+  has_many :users, through: :votes do
+    object.users.pluck(:id)
+  end
+
+  has_many :votes do
+    object.votes.pluck(:id)
+  end
 
   def editable
     scope == object.discussion_proposer
