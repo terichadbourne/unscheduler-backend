@@ -32,10 +32,10 @@ unconferences, inspired by my work as a co-organizer for [Offline Camp](http://o
 ## Screenshots
 
 #### Discussion Proposals
-<img src="images/ScreenshotProposals.png" width="500">
+<img src="public/images/ScreenshotProposals.png" width="500">
 
 #### Admin Panel
-<img src="images/ScreenshotAdminPanel.png" width="500">
+<img src="public/images/ScreenshotAdminPanel.png" width="500">
 
 ## The backstory: Unconference organizing with sticky notes and Mr. Sketch markers
 
@@ -50,10 +50,10 @@ available rooms, topics that should appeal to similar subgroups of attendees
 aren't scheduled to conflict with one another, etc.
 
 #### Voting on proposed discussion topics with sticky notes and stickers
-<img src="images/AnalogVoting.png" width="400">
+<img src="public/images/AnalogVoting.png" width="400">
 
 #### Scheduling the winners on a grid of available session slots
-<img src="images/AnalogScheduling.jpeg" width="400">
+<img src="public/images/AnalogScheduling.jpeg" width="400">
 
 ## Project planning and strategy
 
@@ -235,7 +235,7 @@ adding the related front-end functionality. Here's a look at my work plan.
 - Generate new development and test secrets (`bundle exec rails secret`) and
 store them in `.env` with keys `SECRET_KEY_BASE_DEVELOPMENT` and `SECRET_KEY_BASE_TEST`.
 - Run the local API server at `http://localhost:4741/events` with `bin/rails server` or `bundle exec rails server`.
--
+
 **To run the client app locally:**
 - Fork and clone the [client repository](https://github.com/terichadbourne/unscheduler-ember).
 - Install build dependencies with `npm install`. Dependencies are stored in `package.json`. (If you have not installed phantomjs, you will need to install it globally: `npm install --global phantomjs-prebuilt`.)
